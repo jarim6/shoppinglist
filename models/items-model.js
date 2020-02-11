@@ -10,7 +10,7 @@ const item_schema = new Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'user',
         req: true
-    }
+    },
     notes: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'item',
