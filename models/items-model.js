@@ -11,7 +11,7 @@ const item_schema = new Schema({
         ref: 'user',
         req: true
     },
-    notes: [{
+    lists: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'item',
         req: true

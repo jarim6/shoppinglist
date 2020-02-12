@@ -45,13 +45,13 @@ const post_register = (req, res, next) => {
         name: user_name
     }).then((user) => {
         if (user) {
-            console.log('User name already registered');
+            console.log('User name already registered');            
             return res.redirect('/login');
         }
 
         let new_user = new user_model({
             name: user_name,
-            notes: []
+            lists: []
         });
 
         new_user.save().then(() => {

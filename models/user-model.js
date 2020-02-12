@@ -6,9 +6,9 @@ const user_schema = new Schema({
         type: String,
         required: true
     },
-    notes: [{
+    lists: [{
         type: mongoose.Schema.Types.ObjectId,
-        ref: 'note',
+        ref: 'list',
         req: true
     }]
 });
