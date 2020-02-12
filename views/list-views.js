@@ -12,7 +12,7 @@ const lists_view = ((data) => {
           //html += `<a href="add-item">${list.text}</a>`;
           html += list.text;
           html += `
-            <form action="list-items" method="POST">
+            <form action="/list-item" method="POST">
                 <input type="hidden" name="list_id" value="${list._id}">
                 <button type="submit">Go to shopping list</button>
             </form>
