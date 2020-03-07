@@ -1,13 +1,13 @@
 const items_view = ((data) => {
-    let html = `
+    let html = `§
     <html>
     <body>
         Logged in as user: ${data.user_name}
         <form action="/logout" method="POST">
             <button type="submit">Log out</button>
-        </form>`;
+            </form>`;
 
-
+console.log('here')
     data.items.forEach((item) => {
         html += item.text;
         html += `
@@ -41,5 +41,5 @@ const item_view = (data) => {
     return html;
 };
 
-module.exports.items_view = items_view;
-module.exports.item_view = item_view;
+module.exports.items_views = items_view;
+module.exports.items_view = item_view;

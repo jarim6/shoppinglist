@@ -51,13 +51,17 @@ app.post('/logout', auth_controller.post_logout);
 //lists
 app.get('/', is_logged_handler, list_controller.get_lists);
 app.post('/delete-list', is_logged_handler, list_controller.post_delete_list);
-app.get('/list/:id', is_logged_handler, list_controller.get_list);
+app.get('/list-item/:id', is_logged_handler, list_controller.get_list);
 app.post('/add-list', is_logged_handler, list_controller.post_list);
 
 //items
 app.post('/delete-item', is_logged_handler, items_controller.post_delete_item);
 app.get('/item/:id', is_logged_handler, items_controller.get_item);
 app.post('/add-item', is_logged_handler, items_controller.post_item);
+//app.get('/show-items/:id', is_logged_handler, items_controller.get_items);
+console.log('before post')
+app.post('/show-items', is_logged_handler, items_controller.get_items);
+console.log('after post')
 
 app.use((req, res, next) => {
     res.status(404);

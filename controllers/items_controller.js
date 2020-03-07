@@ -11,6 +11,7 @@ const get_items = (req, res, next) => {
                 user_name: user.name,
                 items: user.items
             };
+            console.log('testi')
             let html = item_views.items_view(data);
             res.send(html);
         });
